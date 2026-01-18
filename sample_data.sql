@@ -1,9 +1,7 @@
--- Script SQL pour insérer des données d'exemple supplémentaires dans GesParking
--- À exécuter après avoir créé la base de données avec database_schema.sql
+
 
 USE gestion_parc_auto;
 
--- Insertion de véhicules supplémentaires
 INSERT INTO vehicule (genre, marque, model, immatriculation, annee_de_mise_en_cir) VALUES
 ('Voiture', 'Toyota', 'Corolla', 'AA-111-BB', 2023),
 ('Voiture', 'Honda', 'Civic', 'CC-222-DD', 2022),
@@ -16,7 +14,7 @@ INSERT INTO vehicule (genre, marque, model, immatriculation, annee_de_mise_en_ci
 ('Utilitaire', 'Mercedes', 'Sprinter', 'QQ-999-RR', 2020),
 ('Voiture', 'Hyundai', 'i30', 'SS-000-TT', 2023);
 
--- Insertion de chauffeurs supplémentaires
+
 INSERT INTO chauffeur (nom_chauffeur, prenom_chauffeur, tel_chauffeur) VALUES
 ('Bernard', 'Luc', '06.11.22.33.44'),
 ('Thomas', 'Julie', '06.22.33.44.55'),
@@ -24,7 +22,7 @@ INSERT INTO chauffeur (nom_chauffeur, prenom_chauffeur, tel_chauffeur) VALUES
 ('Durand', 'Emilie', '06.44.55.66.77'),
 ('Leroy', 'Christophe', '06.55.66.77.88');
 
--- Insertion de garages supplémentaires
+
 INSERT INTO garage (travaux_entretien, travaux_reparation, date_entretien) VALUES
 ('Révision moteur, changement huile', 'Réparation freins à disque', '2024-04-01'),
 ('Contrôle pneumatiques, équilibrage', 'Réparation système électrique', '2024-04-15'),
@@ -32,7 +30,7 @@ INSERT INTO garage (travaux_entretien, travaux_reparation, date_entretien) VALUE
 ('Révision annuelle, contrôle pollution', 'Réparation suspension pneumatique', '2024-05-10'),
 ('Changement pneus été, freins', 'Réparation climatisation et chauffage', '2024-05-20');
 
--- Insertion de pannes supplémentaires
+
 INSERT INTO panne (libelle, id_garage) VALUES
 ('Batterie déchargée', 9),
 ('Pneu éclaté', 10),
@@ -43,7 +41,7 @@ INSERT INTO panne (libelle, id_garage) VALUES
 ('Consommation excessive', NULL),
 ('Problème de direction', NULL);
 
--- Insertion de dossiers supplémentaires
+
 INSERT INTO dossier (date) VALUES
 ('2024-04-01'),
 ('2024-04-10'),
@@ -54,7 +52,7 @@ INSERT INTO dossier (date) VALUES
 ('2024-05-15'),
 ('2024-05-20');
 
--- Association chauffeurs-véhicules supplémentaires
+
 INSERT INTO chauffeur_vehicule (id_chauffeur, id_vehicule) VALUES
 (11, 16), (11, 17),
 (12, 18), (12, 19),
